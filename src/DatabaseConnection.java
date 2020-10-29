@@ -19,10 +19,10 @@ public class DatabaseConnection {
             System.out.println("Opened database successfully");
             stmt = c.createStatement();
             DatabaseConnection t = new DatabaseConnection();
-            t.insert();
+            /*t.insert();
             t.delete();
             t.update();
-            t.alter();
+            t.alter();*/
             t.selectQuery();
             c.commit();
             stmt.close();
