@@ -60,7 +60,7 @@ public class DatabaseConnection {
     }
 
     void selectQuery() throws SQLException {
-        ResultSet rs = stmt.executeQuery("SELECT * FROM  \"OneBoeing\".\"Contact\" ORDER BY ID ;");
+        ResultSet rs = stmt.executeQuery("SELECT * FROM  \"OneBoeing\".\"Contact\" as a  left join  \"OneBoeing\".\"salary\" on a.id=salary.id ;");
         System.out.println("Records from Table Contacts");
         while (rs.next()) {
             int id = rs.getInt("id");
